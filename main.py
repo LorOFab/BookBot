@@ -1,4 +1,5 @@
 
+import sys
 from stats import get_number_of_words, count_characters, chars_dict_to_sorted_list
 
 
@@ -32,19 +33,23 @@ def print_report(book_path: str, word_count: int, sorted_list: list[tuple[str, i
     print("============= END ===============")
 
 
+def check_sys():
 
+     if len(sys.argv) < 2 :
+          print("Usage: python3 main.py <path_to_book>")
+          return sys.exit(1)
 
 
 def main():
 
+        check_sys()
         
         print_report(
-            "books/frankenstein.txt", 
-            get_number_of_words( get_book_text("books/frankenstein.txt") ),
-            chars_dict_to_sorted_list( count_characters( get_book_text("books/frankenstein.txt") ) )
+            sys.argv[1], 
+            get_number_of_words( get_book_text(sys.argv[1]) ),
+            chars_dict_to_sorted_list( count_characters( get_book_text(sys.argv[1]) ) )
         )
             
-
 
 
 
