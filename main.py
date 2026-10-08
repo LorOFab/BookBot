@@ -1,5 +1,5 @@
 
-from stats import get_number_of_words, count_characters
+from stats import get_number_of_words, count_characters, chars_dict_to_sorted_list
 
 
 def get_book_text(file_path: str) -> str :
@@ -11,9 +11,6 @@ def get_book_text(file_path: str) -> str :
 
 
 
-
-
-
 def main():
 
     print( 
@@ -22,6 +19,8 @@ def main():
         
     )
 
-    print(f"{count_characters( get_book_text("books/frankenstein.txt") )}")
+    #print(f"{count_characters( get_book_text("books/frankenstein.txt") )}")
+
+    print(chars_dict_to_sorted_list( count_characters( get_book_text("books/frankenstein.txt") ) ) )
 
 main()
