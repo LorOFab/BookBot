@@ -1,4 +1,6 @@
 
+from stats import get_number_of_words
+
 
 def get_book_text(file_path: str) -> str :
 
@@ -9,19 +11,11 @@ def get_book_text(file_path: str) -> str :
 
 
 
-def number_of_words(book_content: str) -> int :
-
-    words_list = book_content.split()
-
-    return len(words_list)
-
-
-
 def main():
 
     print( 
 
-        f"Found {number_of_words ( get_book_text("books/frankenstein.txt") )} total words"
+        f"Found {get_number_of_words( get_book_text("books/frankenstein.txt") )} total words"
         
     )
 
