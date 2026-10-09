@@ -4,7 +4,7 @@ Un livre, un script, quelques statistiques : **BookBot** est un outil en ligne d
 
 Ce lab a été réalisé dans le cadre du parcours [Boot.dev](https://www.boot.dev). Il permet de mettre en pratique les bases de Python à travers un projet concret, de la lecture d'un fichier à la génération d'un rapport.
 
-## Fonctionnalitésf
+## Fonctionnalités
 
 - Lire un livre depuis un fichier texte fourni en argument.
 - Compter les mots du document.
